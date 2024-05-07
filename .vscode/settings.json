@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Wordle.sln"
+    "dotnet.defaultSolution": "debuz-exam-1.sln"
 }

@@ -146,8 +146,9 @@ GameObject:
   - component: {fileID: 3757327433708718031}
   - component: {fileID: 8161107254002372901}
   - component: {fileID: 8192847900095828359}
+  - component: {fileID: 4681961541589154807}
   m_Layer: 5
-  m_Name: Key_1
+  m_Name: Key_Q
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,3 +256,28 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4681961541589154807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3559730864013629981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f88d213cd17f0947b4188e64b9466e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: Q
+  button: {fileID: 8192847900095828359}
+  backgroundImage: {fileID: 8161107254002372901}
+  colorDict:
+    _serializedList:
+    - Key: 0
+      Value: {r: 0.36862746, g: 0.36862746, b: 0.36862746, a: 1}
+    - Key: 1
+      Value: {r: 0.3254902, g: 0.5529412, b: 0.30588236, a: 1}
+    - Key: 2
+      Value: {r: 0.70980394, g: 0.62352943, b: 0.23137257, a: 1}
+    - Key: 3
+      Value: {r: 0.227451, g: 0.227451, b: 0.23529413, a: 1}

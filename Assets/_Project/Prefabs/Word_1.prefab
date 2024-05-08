@@ -69,10 +69,10 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 20
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -86,7 +86,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5213890057102371190, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Name
-      value: Letter_3
+      value: Letter_0_0
       objectReference: {fileID: 0}
     - target: {fileID: 7482710134142623786, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Pivot.x
@@ -180,7 +180,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5213890057102371190, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Name
-      value: Letter_4
+      value: Letter_0_0
       objectReference: {fileID: 0}
     - target: {fileID: 7482710134142623786, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Pivot.x
@@ -274,7 +274,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5213890057102371190, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Name
-      value: Letter_2
+      value: Letter_0_0
       objectReference: {fileID: 0}
     - target: {fileID: 7482710134142623786, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Pivot.x
@@ -368,7 +368,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5213890057102371190, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Name
-      value: Letter_5
+      value: Letter_0_0
       objectReference: {fileID: 0}
     - target: {fileID: 7482710134142623786, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Pivot.x
@@ -462,7 +462,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5213890057102371190, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Name
-      value: Letter_1
+      value: Letter_0_0
       objectReference: {fileID: 0}
     - target: {fileID: 7482710134142623786, guid: ab43754fadb8f0f42b956e7fe99493e8, type: 3}
       propertyPath: m_Pivot.x

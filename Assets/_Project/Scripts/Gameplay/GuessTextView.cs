@@ -46,4 +46,8 @@ public class GuessTextView : MonoBehaviour
         });
     }
 
+     void OnValidate()
+    {
+        gameObject.name = "Letter_" + row+"_" + index;
+    }
 }

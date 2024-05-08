@@ -4,6 +4,7 @@ using UnityEngine;
 using UniRx;
 using System;
 using System.Linq;
+using Unity.VisualScripting;
 
 public class GuessPod : MonoSingleton<GuessPod>
 {
@@ -21,6 +22,24 @@ public class GuessPod : MonoSingleton<GuessPod>
         GameManager.Instance.GetState().Where(state => state == GameState.Gameplay).Subscribe(state => StartGame());
     }
 
+    void OnGUI()
+    {
+        if (GameManager.Instance.GetState().Value != GameState.Gameplay) return;
+        Event e = Event.current;
+
+        if (e.type == EventType.KeyDown && e.keyCode.ToString().Length == 1 && char.IsLetter(e.keyCode.ToString()[0]))
+        {
+            AddWord(e.keyCode.ToString());
+        }
+        if(e.type == EventType.KeyDown && e.keyCode == KeyCode.Return)
+        {
+            Submit();
+        }
+        if(e.type == EventType.KeyDown && e.keyCode == KeyCode.Backspace)
+        {
+            RemoveLastWord();
+        }
+    }
     public void StartGame()
     {
         isWin = false;
@@ -32,6 +51,7 @@ public class GuessPod : MonoSingleton<GuessPod>
         RandomWord();
 
     }
+
 
     public void RandomWord()
     {

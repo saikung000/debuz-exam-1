@@ -55,7 +55,7 @@ public class GuessPod : MonoSingleton<GuessPod>
     public void Submit()
     {
         if (guessWord.Value.Length != 5) return;
-        
+
         List<GuessWordState> checkLetterList = new List<GuessWordState>();
         string guessWordString = guessWord.Value;
         string correctWordString = correctWord.Value;
@@ -68,7 +68,7 @@ public class GuessPod : MonoSingleton<GuessPod>
                 haveCharList.Remove(guessWordString[i]);
 
             }
-            else if (correctWordString.Contains(guessWordString[i]) && !correctCharList.Contains(guessWordString[i]))
+            else if (correctWordString.Contains(guessWordString[i]) && !IsHaveMatch(guessWordString, correctWordString))
             {
                 checkLetterList.Add(GuessWordState.Have);
                 if (!correctCharList.Contains(guessWordString[i]))
@@ -103,4 +103,17 @@ public class GuessPod : MonoSingleton<GuessPod>
             GameManager.Instance.ChangeState(GameState.Result);
         }
     }
+
+    private bool IsHaveMatch(string str1, string str2)
+    {
+        for (int i = 0; i < str1.Length; i++)
+        {
+            if (str1[i] == str2[i])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
 }

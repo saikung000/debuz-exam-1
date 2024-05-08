@@ -12,6 +12,7 @@ public class ResultPanelView : MonoBehaviour
     private GameManager gameManager;
     [SerializeField] private GameObject backgroundImage;
     [SerializeField] private Button restartButton;
+    [SerializeField] private TextMeshProUGUI answerText;
     [SerializeField] private TextMeshProUGUI guessCountText;
     [SerializeField] private TextMeshProUGUI guessWrongText;
     private IDisposable delayShow;
@@ -22,11 +23,12 @@ public class ResultPanelView : MonoBehaviour
         gameManager = GameManager.Instance;
         gameManager.GetState().Subscribe(gameState =>
         {
-             gameObject.SetActive(true);
+            gameObject.SetActive(true);
+            answerText.text = guessPod.correctWord.Value;
             if (gameState == GameState.Result)
             {
                 delayShow?.Dispose();
-                delayShow = Observable.Timer(TimeSpan.FromSeconds(2)).Subscribe(_ =>
+                delayShow = Observable.Timer(TimeSpan.FromSeconds(0.5f)).Subscribe(_ =>
                 {
                     backgroundImage.SetActive(true);
                     guessCountText.gameObject.SetActive(guessPod.isWin);

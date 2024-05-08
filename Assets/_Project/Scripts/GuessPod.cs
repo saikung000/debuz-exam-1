@@ -68,7 +68,7 @@ public class GuessPod : MonoSingleton<GuessPod>
                 haveCharList.Remove(guessWordString[i]);
 
             }
-            else if (correctWordString.Contains(guessWordString[i]) && !IsHaveMatch(guessWordString, correctWordString))
+            else if (correctWordString.Contains(guessWordString[i]) && !IsHaveMatch(guessWordString[i], guessWordString, correctWordString))
             {
                 checkLetterList.Add(GuessWordState.Have);
                 if (!correctCharList.Contains(guessWordString[i]))
@@ -87,6 +87,7 @@ public class GuessPod : MonoSingleton<GuessPod>
 
         if (guessCount.Value != 5)
         {
+            guessCount.Value++;
             if (checkLetterList.All(state => state == GuessWordState.Correct))
             {
                 isWin = true;
@@ -94,7 +95,6 @@ public class GuessPod : MonoSingleton<GuessPod>
             }
             else
             {
-                guessCount.Value++;
                 guessWord.Value = "";
             }
         }
@@ -104,11 +104,12 @@ public class GuessPod : MonoSingleton<GuessPod>
         }
     }
 
-    private bool IsHaveMatch(string str1, string str2)
+    private bool IsHaveMatch(char charToCheck, string guessString, string correctString)
     {
-        for (int i = 0; i < str1.Length; i++)
+        if (!guessString.Contains(charToCheck)) return false;
+        for (int i = 0; i < guessString.Length; i++)
         {
-            if (str1[i] == str2[i])
+            if (charToCheck == guessString[i] && guessString[i] == correctString[i])
             {
                 return true;
             }
